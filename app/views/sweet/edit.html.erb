@@ -1,0 +1,16 @@
+<div class = "main posts-new">
+    <div class = "container">
+        <h1 class = "form">編集する</h1>
+          <%= form_tag("/sweet/#{@sweet.id}/update") do %>
+            <div class = "form-body">
+                <p>name
+            <textarea name="name"><%= @sweet.name %></textarea>
+            </p>
+            <p>price
+            <textarea name="price"><%= @sweet.price %></textarea>
+            </p>
+               <input type="submit" value="保存">
+            </div>
+          <% end %>
+    </div>
+</div>

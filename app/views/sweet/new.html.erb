@@ -1,0 +1,22 @@
+<div class "main posts-new">
+    <div class = "container">
+        <h1 class = "form-heading">投稿する</h1>
+        <%= form_tag("/sweet/create") do %>
+          <div class = "form">
+            <div class = "form-body">
+                  <% @sweet.errors.full_messages.each do |message| %>
+                     <div class = "form-error">
+                        <%= message %>
+                     </div>
+                  <% end %>
+            <p>name
+            <textarea name="name"><%= @sweet.name %></textarea>
+            </p>
+            <p>price
+            <textarea name="price"><%= @sweet.price %></textarea>
+            </p>
+            <input type="submit" value="投稿">
+        </div>
+        <% end %>
+    </div>
+<div>
